@@ -19,6 +19,8 @@
       * finn ut hvorfor predeploy og postbuild ikke kjøres automatisk
       * for mye margin på h2 på noen sider?
       * how to write robots.txt
+      *  Om meg side
+        * fav addons
     * React-snap
       * Research react-snap error
       * Les om konkurrent: react-prerendered-component
@@ -28,8 +30,6 @@
       * lag sitemap med et tool. Kutlash/react-router
       * se pagespeed
       * Se google search console for flere oppg
-    * Om meg side
-      * fav addons
     * nytt webarbeid
       * fagstoff
       * drømmer oversikt
