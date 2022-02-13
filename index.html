@@ -18,17 +18,35 @@
     <h1>nested expandable / collapsibles</h1>
     <h2>Første</h2>
     <ul>
-      <li>eeeee</li>
+      <li>
+        eeeee
+        <ul>
+          <li>rrr</li>
+          <li>iiii</li>
+        </ul>
+      </li>
       <li>ddddd</li>
     </ul>
     <h2>Andre</h2>
     <ul>
-      <li>eeeee</li>
+      <li>
+        eeeee
+        <ul>
+          <li>rrr</li>
+          <li>iiii</li>
+        </ul>
+      </li>
       <li>ddddd</li>
     </ul>
     <h2>Tredje</h2>
     <ul>
-      <li>eeeee</li>
+      <li>
+        eeeee
+        <ul>
+          <li>rrr</li>
+          <li>iiii</li>
+        </ul>
+      </li>
       <li>ddddd</li>
     </ul>
     <script>
@@ -37,10 +55,18 @@
 
       const h2s = document.querySelectorAll("h2");
       h2s.forEach((heading) => {
-        heading.addEventListener("click", ()=>{
-          const ul = heading.nextElementSibling
-            ul.classList.toggle("visible")
-        })
+        const ul = heading.nextElementSibling;
+        heading.addEventListener("click", () => {
+          ul.classList.toggle("visible");
+        });
+
+        const lisInUl = ul.querySelectorAll("li");
+        lisInUl.forEach((listItem) => {
+          const ulInLi = listItem.querySelector("ul");
+          listItem.addEventListener("click", () => {
+            ulInLi.classList.toggle("visible");
+          });
+        });
       });
     </script>
   </body>
