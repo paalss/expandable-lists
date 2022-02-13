@@ -9,7 +9,7 @@
       .clickable {
         cursor: pointer;
       }
-      .clickable>* {
+      .clickable > * {
         cursor: default;
       }
       ul {
@@ -62,13 +62,22 @@
       const h2s = document.querySelectorAll("h2");
       h2s.forEach((heading) => {
         const ul = heading.nextElementSibling;
-        heading.addEventListener("click", () => {
-          ul.classList.toggle("visible");
-        });
+        if (ul.localName === "ul") {
+          heading.addEventListener("click", () => {
+            ul.classList.toggle("visible");
+          });
+        } else {
+          console.error(
+            "a clickable <h2> has no <ul> as its next element sibling"
+          );
+        }
 
         const lisInUl = ul.querySelectorAll("li");
         lisInUl.forEach((listItem) => {
           const ulInLi = listItem.querySelector("ul");
+
+          // if an unordered list resides in list item,
+          // toggle it on list item click
           if (ulInLi) {
             listItem.addEventListener("click", () => {
               ulInLi.classList.toggle("visible");
