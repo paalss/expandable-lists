@@ -8,14 +8,15 @@
 
 * Fritwebarb
   * Keyboard shortcut for build og postbuild og deploy
-  * Automatisk desktop-first to mobile-first CSS konverterer
+  * Automatisk desktop-first to mobile-first CSS konverterer =========
+  * 
   * Visuallisert git bash
   * Portfolio
     * Diverse
+      * Gallery: height og width på alle bildene. deaktiver min-høyde på body og se effekten ===
       * Tilpass for screen readers
       * React-lingui
       * Oppdatere tekstbeskrivelse slik at PHTML/HTML gir mening i EO-siden
-      * Gallery: height og width på alle bildene. deaktiver min-høyde på body og se effekten
       * finn ut hvorfor predeploy og postbuild ikke kjøres automatisk
       * for mye margin på h2 på noen sider?
       * how to write robots.txt
@@ -25,7 +26,8 @@
       * Research react-snap error
       * Les om konkurrent: react-prerendered-component
     * SEO
-      * auto convert to webp / AVIF
+      * auto convert to webp / AVIF ==============
+      * auto convert to webp / AVIF ==============
       * sjekk om duckduckgo og bing plukker opp porteføljen
       * lag sitemap med et tool. Kutlash/react-router
       * se pagespeed
