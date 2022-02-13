@@ -63,9 +63,11 @@
         const lisInUl = ul.querySelectorAll("li");
         lisInUl.forEach((listItem) => {
           const ulInLi = listItem.querySelector("ul");
-          listItem.addEventListener("click", () => {
-            ulInLi.classList.toggle("visible");
-          });
+          if (ulInLi) {
+            listItem.addEventListener("click", () => {
+              ulInLi.classList.toggle("visible");
+            });
+          }
         });
       });
     </script>
