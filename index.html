@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .clickable {
+        cursor: pointer;
+      }
+      .clickable>* {
+        cursor: default;
+      }
       ul {
         display: none;
       }
@@ -16,9 +22,9 @@
   </head>
   <body>
     <h1>nested expandable / collapsibles</h1>
-    <h2>Første</h2>
+    <h2 class="clickable">Første</h2>
     <ul>
-      <li>
+      <li class="clickable">
         eeeee
         <ul>
           <li>rrr</li>
@@ -27,9 +33,9 @@
       </li>
       <li>ddddd</li>
     </ul>
-    <h2>Andre</h2>
+    <h2 class="clickable">Andre</h2>
     <ul>
-      <li>
+      <li class="clickable">
         eeeee
         <ul>
           <li>rrr</li>
@@ -38,9 +44,9 @@
       </li>
       <li>ddddd</li>
     </ul>
-    <h2>Tredje</h2>
+    <h2 class="clickable">Tredje</h2>
     <ul>
-      <li>
+      <li class="clickable">
         eeeee
         <ul>
           <li>rrr</li>
