@@ -61,10 +61,12 @@
 
       const h2s = document.querySelectorAll("h2");
       h2s.forEach((heading) => {
-        const ul = heading.nextElementSibling;
-        if (ul.localName === "ul") {
+        const ulNextToH2 =
+          heading.nextElementSibling.localName === "ul" &&
+          heading.nextElementSibling;
+        if (ulNextToH2) {
           heading.addEventListener("click", () => {
-            ul.classList.toggle("visible");
+            ulNextToH2.classList.toggle("visible");
           });
         } else {
           console.error(
@@ -72,7 +74,7 @@
           );
         }
 
-        const lisInUl = ul.querySelectorAll("li");
+        const lisInUl = ulNextToH2.querySelectorAll("li");
         lisInUl.forEach((listItem) => {
           const ulInLi = listItem.querySelector("ul");
 
